@@ -5,10 +5,9 @@ env:
   global:
   - IMAGE_NAME=davidemoro/pytest-play
 before_install:
-  - docker build -t "$IMAGE_NAME" .
-  - docker ps -a
+  - travis_wait 25 docker build -t "$IMAGE_NAME" .
 script:
-  - docker run -d --rm -v $(pwd)/tests:/src $IMAGE_NAME
+  - docker run -i --rm -v $(pwd)/tests:/src $IMAGE_NAME
 deploy:
   provider: script
   script: bash docker_push

@@ -1,4 +1,4 @@
 ---
 - type: assert
   provider: python
-  expression: "0"
+  expression: "1"
