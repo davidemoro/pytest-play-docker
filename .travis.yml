@@ -4,20 +4,13 @@ services:
 env:
   global:
   - IMAGE_NAME=davidemoro/pytest-play
-  - REGISTRY_USER=davidemoro
-  - secure: aUcuD7QGVY8ouNHdBI1+3scnJb0xpQ3QTB17YuA1dUDrUcZEpWQOgJR+4MGKEiuil9lj4SzY6zOvBVfuBmf8DkULgKkEJCE2RoCfEtd7cghqVw2rbh4pafYX00dQLGgHBsD/mhi4Fo9IAON0VsKqnUVAjOQwS8j6sW9FgkmabvuObYfV4dqDDFf3H54hJSdfXpL1xa1f18SjBLpdz4Xy4aPpKKRikdOdGlGUVqcD4dITzVTFbSroZMiYxCvLcJ2W85H+RN/ZWN1weD8r1WoFAgOQpx3CZBETlCagMzC/FZpbILeFl5AQeXrjqFeAk4H/TE95EDs5wSHa7M5RNgH+GNim12LZ8PC6QxkQ3niCU+BKtqz7HAZIkVJ4IBezR4dTn1PFJVUnb2YFNaIoJO0nKhXgEoiYFlMHJnSAoltv8+vbgJkjZXG6BRc3xoO4JIWHG8QdXDZRI6wU8rgV/A42UB8IUBUzpWoprom6h6HCC+IJlZ1Cr083vD26Y7/ov0czb3vCqHKBBMqiUpHmbyPE/PDdNu8evLyevTOSKIvop44VTUon94qWGqNakMj5OuKnkfkX1ZBfH0bPyGKccJfcxvOYc40hVEZ7W+epQ/PDDc9DBcPzrKHrdZZ/KjyeAexeBtp+VnE/ekxIehRljlRrLau23LnPalU6VJjA/ahz9t8=
-before_script:
-- docker pull "$IMAGE_NAME" || true
+before_install:
+  - docker build -t "$IMAGE_NAME" .
+  - docker ps -a
 script:
-- docker build --pull --cache-from "$IMAGE_NAME" --tag "$IMAGE_NAME" .
-after_script:
-- docker images
-before_deploy:
-- docker login -u "$REGISTRY_USER" -p "$REGISTRY_PASS"
-- docker tag "$IMAGE_NAME" "${IMAGE_NAME}:latest"
-- docker tag "$IMAGE_NAME" "${IMAGE_NAME}:${version}"
+  - docker run -d --rm -v $(pwd)/tests:/src $IMAGE_NAME
 deploy:
   provider: script
-  script: docker push "${IMAGE_NAME}:latest" && docker push "${IMAGE_NAME}:${TRAVIS_COMMIT}"
-  on: 
-branch: master
+  script: bash docker_push
+  on:
+    branch: master
