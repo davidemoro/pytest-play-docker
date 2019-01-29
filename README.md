@@ -1,5 +1,7 @@
 # pytest-play
 
+[![Build Status](https://travis-ci.org/davidemoro/pytest-play-docker.svg?branch=master)](https://travis-ci.org/davidemoro/pytest-play-docker)
+
 [pytest-play](https://github.com/pytest-dev/pytest-play) distributed as a docker
 based command line utility shipped with all supported third party plugins installed
 for (test) automation playing with YAML files.
