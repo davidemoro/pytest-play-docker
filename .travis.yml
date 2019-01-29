@@ -1,13 +1,20 @@
+language: python
+cache: pip
+python: 3.6
 sudo: required
 services:
 - docker
 env:
   global:
   - IMAGE_NAME=davidemoro/pytest-play
-before_install:
-  - travis_wait 25 docker build -t "$IMAGE_NAME" .
+install:
+- travis_retry pip install -U tox
+- TOX_ENV=${TRAVIS_PYTHON_VERSION/[0-9].[0-9]/py${TRAVIS_PYTHON_VERSION/.}}
 script:
-  - docker run -i --rm -v $(pwd)/tests:/src $IMAGE_NAME
+- travis_wait 25 tox -e $TOX_ENV
+before_deploy:
+- travis_wait 25 docker build -t "$IMAGE_NAME" .
+- docker run -i --rm -v $(pwd)/tests:/src $IMAGE_NAME
 deploy:
   provider: script
   script: bash docker_push
