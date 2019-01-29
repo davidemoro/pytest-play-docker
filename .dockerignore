@@ -3,5 +3,4 @@ docker_push/
 tests/
 .tox/
 .pytest_cache/
-requirements.txt
 tox.ini
