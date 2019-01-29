@@ -4,3 +4,4 @@ tests/
 .tox/
 .pytest_cache/
 tox.ini
+README.md
