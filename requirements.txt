@@ -30,7 +30,7 @@ pytest-pypom-navigation==2.0.2
 pytest-splinter==2.0.0
 pytest-variables==1.7.1
 python-dateutil==2.7.5
-PyYAML==3.13
+PyYAML==4.2b4
 requests==2.21.0
 RestrictedPython==4.0b7
 s3transfer==0.1.13
