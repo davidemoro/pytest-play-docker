@@ -5,7 +5,7 @@ botocore==1.12.86
 cassandra-driver==3.16.0
 certifi==2018.11.29
 chardet==3.0.4
-colander==1.6.0
+colander==1.7.0
 docutils==0.14
 idna==2.8
 iso8601==0.1.12
