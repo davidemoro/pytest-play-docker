@@ -13,7 +13,9 @@ install:
 script:
 - travis_wait 25 tox -e $TOX_ENV
 - rm -fR tests/.pytest_cache tests/__pycache__
-- travis_wait 25 docker build -t "$IMAGE_NAME" .
+- travis_wait docker pull python:3.6.8
+- travis_wait docker pull "$IMAGE_NAME:latest"
+- travis_wait 25 docker build -t "$IMAGE_NAME" --cache-from "$IMAGE_NAME:latest" .
 - docker run -i --rm -v $(pwd)/tests:/src $IMAGE_NAME
 deploy:
   provider: script
