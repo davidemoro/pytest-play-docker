@@ -1,0 +1,24 @@
+test_data:
+  - foo: bar
+  - foo: baz
+---
+- comment: "make a post call with {'foo': 'bar'} to our endpoint,
+    verify that status code is 200 and save json parsed response
+    in a endpoint_response variable for further assertions"
+  type: POST
+  provider: play_requests
+  url: http://localhost:8080/endpoint
+  parameters:
+    json:
+      foo: $foo
+  variable: endpoint_response
+  variable_expression: response.json()
+  assertion: response.status_code == 200
+- comment: we expect a status 'yeah!'
+  type: assert
+  provider: python
+  expression: variables['endpoint_response']['status'] == 'yeah!'
+- comment: we expect a certain response
+  type: assert
+  provider: python
+  expression: variables['endpoint_response']['foo'] == '$foo'
