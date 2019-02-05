@@ -1,11 +1,12 @@
 FROM python:3.6.8-alpine3.8
 
-COPY . /src
+RUN mkdir /src
 WORKDIR /src
 
-RUN apk add --no-cache --virtual .build-deps git build-base postgresql-dev mariadb-connector-c-dev && \
-    pip install --no-cache-dir -r requirements.txt && \
-    apk del .build-deps && \
-    rm -f requirements.txt
+RUN apk add --no-cache build-base postgresql-dev mariadb-connector-c-dev
+COPY requirements_cassandra.txt /src
+RUN pip install --no-cache-dir -r requirements_cassandra.txt
+COPY requirements.txt /src
+RUN pip install --no-cache-dir -r requirements.txt
 
 ENTRYPOINT ["pytest"]

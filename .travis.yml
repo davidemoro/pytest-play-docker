@@ -1,20 +1,13 @@
-language: python
-cache: pip
-python: 3.6
 sudo: required
 services:
 - docker
 env:
   global:
   - IMAGE_NAME=davidemoro/pytest-play
-install:
-- travis_retry pip install -U tox
-- TOX_ENV=${TRAVIS_PYTHON_VERSION/[0-9].[0-9]/py${TRAVIS_PYTHON_VERSION/.}}
 script:
-- travis_wait 25 tox -e $TOX_ENV
-before_deploy:
-- rm -fR tests/.pytest_cache tests/__pycache__
-- travis_wait 25 docker build -t "$IMAGE_NAME" .
+- travis_wait docker pull python:3.6.8-alpine3.8
+- travis_wait docker pull "$IMAGE_NAME:latest"
+- travis_wait 25 docker build --cache-from "$IMAGE_NAME:latest" -t "$IMAGE_NAME" .
 - docker run -i --rm -v $(pwd)/tests:/src $IMAGE_NAME
 deploy:
   provider: script
