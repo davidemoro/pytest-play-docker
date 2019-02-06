@@ -1,0 +1,10 @@
+- comment: visit base url
+  type: get
+  provider: selenium
+  url: https://github.com/pytest-dev/pytest-play
+- comment: assert travis CI badge is visible
+  type: waitForElementVisible
+  provider: selenium
+  locator:
+    type: css
+    value: img[alt="See Build Status on Travis CI"]
