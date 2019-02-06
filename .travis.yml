@@ -4,11 +4,13 @@ services:
 env:
   global:
   - IMAGE_NAME=davidemoro/pytest-play
+  - secure: TF5u3BFCza7LPtak4eksxjig1cqUuT57SCM//ZgBfZyA477Wq2gAagoeYyabzd3A1KFZVOwns7OfbXGnJZb1Lgfn26Ih+nuNB70M/8ozfnBe+kPRC8I0MBoQTrhLNBaYtzE/dad9WTLB4Ws9nuPpA+LBnzKJStfapVdUzrY611rsiK0IFik94GxpzJNJVMx7PkhD6sZGSjyCpELafJyP+r56XVwj9+8mbeMxcBQ/hL5PKO/4g4g1kbj0RwuqOvFUIfEAPW8arCkOveaUMQa40bmee4MrOp+CCQ+McQtYgGWczgFUTUFX97qPPOb3bNwzwO06RfS2qGeT8uFFqBvTvzFJwbjO0UypWuZtq6E3GxeRKM6/eTZ7VOIdodpRTl7mNGuF1vriMkZnplSRyIdFLzTrBBgNt3wSlhFRKYtQR80r+A/11lknYe4BAbkGmhLd6jf2p5XsBKmoHtEjO9n6vji+yIii/3wcZF3MmHr9XL1Q7lD58vxHyIOHtSWTjFUlnOIO42Y2Fea8cTlNSPF2CphSChoBeCgLZc1G0VG3vcberonQts5tsyO9NZPiiVnl55L/4EqkvWO4KDRmhtDMBseqJskI/ImWE6MuFHeNZs5KM6MnNK1NldIcLtCZ+/vvI0pwqIhYnL+nFVlEP193lSe+/QaaZphmbKeTnsKntrs=
 script:
 - travis_wait docker pull python:3.6.8-alpine3.8
 - travis_wait docker pull "$IMAGE_NAME:latest"
 - travis_wait 25 docker build --cache-from "$IMAGE_NAME:latest" -t "$IMAGE_NAME" .
-- docker run -i --rm -v $(pwd)/tests:/src $IMAGE_NAME
+- docker run -i --rm -v $(pwd)/tests:/src $IMAGE_NAME --splinter-webdriver=remote
+  --splinter-remote-url=$REMOTE_URL
 deploy:
   provider: script
   script: bash docker_push

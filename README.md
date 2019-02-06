@@ -81,3 +81,10 @@ The pytest-play project is licensed under the Apache License 2.0 - see the [LICE
 ## Acknowledgments
 
 * Python and pytest community
+
+## Sponsored by
+
+Sponsored by
+============
+
+![Browserstack](http://cookiecutter-qa.readthedocs.io/en/latest/_static/browserstack.svg)
