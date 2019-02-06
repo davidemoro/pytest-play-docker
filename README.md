@@ -41,7 +41,13 @@ Standard pytest parameters (see [pytest](https://docs.pytest.org/en/latest/))
 docker run -i --rm -v $(pwd):/src davidemoro/pytest-play -x -k "something"
 ```
 
-If you are using WIndows remove ``$(pwd)`` with your current path location.
+Selenium tests (see [play_selenium](https://github.com/davidemoro/play_selenium))
+
+```shell
+docker run -i --rm -v $(pwd):/src davidemoro/pytest-play --splinter-webdriver=remote --splinter-remote-url=http://USERNAME:ACCESS_KEY@hub.browserstack.com:80/wd/hub
+```
+
+If you are using Windows remove ``$(pwd)`` with your current path location.
 
 ## Built With
 
