@@ -1,6 +1,6 @@
 test_data:
-    - database_url: postgresql://postgres@localhost:5432/play_testing
-    - database_url: mysql+mysqldb://root@localhost:3306/play_testing
+- database_url: postgresql://postgres@localhost:5432/play_testing
+- database_url: mysql+mysqldb://root@localhost:3306/play_testing
 ---
 - type: sql
   provider: play_sql
