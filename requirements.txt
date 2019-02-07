@@ -11,6 +11,7 @@ idna==2.8
 iso8601==0.1.12
 jmespath==0.9.3
 more-itertools==5.0.0
+mysqlclient==1.4.1
 paho-mqtt==1.4.0
 parametrizer==0.0.1
 play-cassandra==0.0.4
@@ -21,6 +22,7 @@ play-selenium==0.0.1
 play-sql==0.0.3
 play-websocket==0.0.2
 pluggy==0.8.1
+psycopg2-binary==2.7.7
 py==1.7.0
 PyPOM==2.2.0
 pypom-form==0.3.1
