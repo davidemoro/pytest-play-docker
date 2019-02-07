@@ -8,4 +8,4 @@ test_data:
   query: SELECT code, title FROM play where code = 1
   variable: title
   variable_expression: results.first()[1]
-  assertion: '$title' == 'hello!'
+  assertion: "'$title' == 'hello!'"
