@@ -1,11 +1,13 @@
 test_data:
-- database_url: postgresql://postgres@localhost:5432/play_testing
-- database_url: mysql+mysqldb://root@localhost:3306/play_testing
+# - database_url: postgresql://postgres@localhost:5432/play_testing
+# - database_url: mysql+mysqldb://root@localhost:3306/play_testing
+- database_url: sqlite:///test.db
 ---
-- type: sql
+- comment: "this database contains a title column 'hello!' with id 1"
+  type: sql
   provider: play_sql
   database_url: $database_url
-  query: SELECT code, title FROM play where code = 1
+  query: SELECT title from play where id=1
   variable: title
-  variable_expression: results.first()[1]
-  assertion: "'$title' == 'hello!'"
+  variable_expression: results.first()[0]
+  assertion: "variables['title']== 'hello!'"
