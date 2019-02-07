@@ -11,7 +11,7 @@ before_script:
 - psql -c "create database play_testing;" -U postgres
 - psql -d play_testing -c "create table play(id INTEGER, title VARCHAR(200)); INSERT INTO play VALUES (1, 'hello!')" -U postgres
 - mysql -e "create database play_testing;"
-- mysql -e "USE play_testing; create table play(id INTEGER, title VARCHAR(200)); INSERT INTO play (1, 'hello!')"
+- mysql -e "USE play_testing; create table play(id INTEGER, title VARCHAR(200)); INSERT INTO play VALUES (1, 'hello!')"
 script:
 - travis_wait docker pull python:3.6.8-alpine3.8
 - travis_wait docker pull "$IMAGE_NAME:latest"
