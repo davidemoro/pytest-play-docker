@@ -11,6 +11,7 @@ idna==2.8
 iso8601==0.1.12
 jmespath==0.9.3
 more-itertools==5.0.0
+mysqlclient==1.4.1
 paho-mqtt==1.4.0
 parametrizer==0.0.1
 play-cassandra==0.0.4
