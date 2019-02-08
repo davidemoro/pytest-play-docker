@@ -5,7 +5,7 @@ WORKDIR /src
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
 		libpq-dev \
-		libmysqlclient-dev \
+                default-libmysqlclient-dev \
         && rm -rf /var/lib/apt/lists/*
 COPY requirements_cassandra.txt /src
 RUN pip install --no-cache-dir -r requirements_cassandra.txt
