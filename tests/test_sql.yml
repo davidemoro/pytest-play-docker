@@ -1,6 +1,6 @@
 test_data:
 - database_url: postgresql://postgres@localhost:5432/play_testing
-# - database_url: mysql+mysqldb://root@localhost:3306/play_testing
+- database_url: mysql+mysqldb://root@localhost:3306/play_testing
 - database_url: sqlite:///test.db
 ---
 - comment: "this database contains a title column 'hello!' with id 1"

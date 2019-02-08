@@ -16,7 +16,7 @@ script:
 - travis_wait docker pull python:3.7
 - travis_wait docker pull "$IMAGE_NAME:latest"
 - travis_wait 25 docker build --cache-from "$IMAGE_NAME:latest" -t "$IMAGE_NAME" .
-- docker run -i --rm -v $(pwd)/tests:/src --network host $IMAGE_NAME --splinter-webdriver=remote
+- docker run -i --rm -v $(pwd)/tests:/src --network host -v /var/run/mysqld/mysqld.sock:/var/run/mysqld/mysqld.sock $IMAGE_NAME --splinter-webdriver=remote
   --splinter-remote-url=$REMOTE_URL
 deploy:
   provider: script
