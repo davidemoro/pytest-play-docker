@@ -1,7 +1,7 @@
 -r requirements_cassandra.txt
 atomicwrites==1.3.0
 attrs==18.2.0
-boto3==1.9.86
+boto3==1.9.90
 botocore==1.12.88
 certifi==2018.11.29
 chardet==3.0.4
