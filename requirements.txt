@@ -34,7 +34,7 @@ pytest-variables==1.7.1
 python-dateutil==2.8.0
 PyYAML==4.2b4
 requests==2.21.0
-RestrictedPython==4.0b7
+RestrictedPython==4.0b8
 s3transfer==0.1.13
 selenium==3.141.0
 six==1.12.0
