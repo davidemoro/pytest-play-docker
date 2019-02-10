@@ -1,19 +1,22 @@
 test_data:
   - data: ciao
-  - data: decouplet test data
+  - data: decoupled test data
 ---
-- provider: play_websocket
+- comment: connect to websocket url defined in variables.yml file (--variables option)
+  provider: play_websocket
   type: connect
   options:
     url: "$websocket_url"
     timeout: 5
-- provider: play_websocket
+- comment: send some data to websocket server
+  provider: play_websocket
   type: send
   url: "$websocket_url"
   payload: $data
-- provider: play_websocket
+- comment: receive response (echo)
+  provider: play_websocket
   type: recv
   url: "$websocket_url"
   variable: data
   variable_expression: results
-  assertion: variables['data'] == $data
+  assertion: variables['data'] == '$data'
