@@ -1,5 +1,6 @@
 test_data:
-  - websocket_url: wss://echo.websocket.org/
+  - data: ciao
+  - data: decouplet test data
 ---
 - provider: play_websocket
   type: connect
@@ -9,10 +10,10 @@ test_data:
 - provider: play_websocket
   type: send
   url: "$websocket_url"
-  payload: ciao
+  payload: $data
 - provider: play_websocket
   type: recv
   url: "$websocket_url"
   variable: data
   variable_expression: results
-  assertion: variables['data'] == 'ciao'
+  assertion: variables['data'] == $data
