@@ -1,0 +1,18 @@
+test_data:
+  - websocket_url: wss://echo.websocket.org/
+---
+- provider: play_websocket
+  type: connect
+  options:
+    url: "$websocket_url"
+    timeout: 5
+- provider: play_websocket
+  type: send
+  url: "$websocket_url"
+  payload: ciao
+- provider: play_websocket
+  type: recv
+  url: "$websocket_url"
+  variable: data
+  variable_expression: results
+  assertion: variables['data'] == 'ciao'
