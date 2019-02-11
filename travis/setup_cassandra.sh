@@ -1,6 +1,6 @@
 #!/bin/bash
 function cassandra_ready {
-    while ! travis_retry csqlsh -e "describe cluster;" ; do
+    while ! csqlsh -e "describe cluster;" ; do
         echo "waiting for cassandra"
         sleep 3
     done
