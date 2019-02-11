@@ -14,7 +14,7 @@ before_script:
 - mysql -e "create database play_testing;"
 - mysql -e "USE play_testing; create table play(id INTEGER, title VARCHAR(200)); INSERT INTO play VALUES (1, 'hello!')"
 - sleep 20
-- cqlsh -e "create keyspace dev WITH REPLICATION = {'class' : 'SimpleStrategy', 'replication_factor' : 1};"
+- 'cqlsh -e "create keyspace dev WITH REPLICATION = {\"class\" : \"SimpleStrategy\", \"replication_factor\" : 1};"'
 - cqlsh -e "create dev.table play(id int, title varchar); insert into dev.play (id, title) values (1, 'hello!');"
 script:
 - travis_wait docker pull python:3.7
