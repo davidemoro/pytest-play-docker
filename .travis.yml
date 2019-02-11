@@ -14,7 +14,8 @@ before_script:
 - mysql -e "create database play_testing;"
 - mysql -e "USE play_testing; create table play(id INTEGER, title VARCHAR(200)); INSERT INTO play VALUES (1, 'hello!')"
 - sleep 20
-- cqlsh -e "create keyspace dev; create dev.table play(id int, title varchar); insert into dev.play (id, title) values (1, 'hello!');"
+- cqlsh -e "create keyspace dev;"
+- cqlsh -e "create dev.table play(id int, title varchar); insert into dev.play (id, title) values (1, 'hello!');"
 script:
 - travis_wait docker pull python:3.7
 - travis_wait docker pull "$IMAGE_NAME:latest"
