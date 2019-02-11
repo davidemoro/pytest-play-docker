@@ -12,4 +12,4 @@
   query: SELECT title from play WHERE code = 1;
   variable_name: title
   expression: results[0]
-  assertion: '$title' == 'hello!'
+  assertion: "'$title' == 'hello!'"
