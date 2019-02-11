@@ -1,0 +1,15 @@
+---
+- provider: play_cassandra
+  type: execute
+  connection:
+    contact_points:
+      - 127.0.0.1
+    port: 9042
+    auth_provider:
+      username: cassandra
+      password: cassandra
+  keyspace: dev
+  query: SELECT title from play WHERE code = 1;
+  variable: title
+  variable_expression: results[0].title
+  assertion: "'$title' == 'hello!'"

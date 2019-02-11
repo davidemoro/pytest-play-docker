@@ -3,6 +3,7 @@ services:
 - docker
 - mysql
 - postgresql
+- cassandra
 env:
   global:
   - IMAGE_NAME=davidemoro/pytest-play
@@ -12,6 +13,7 @@ before_script:
 - psql -d play_testing -c "create table play(id INTEGER, title VARCHAR(200)); INSERT INTO play VALUES (1, 'hello!')" -U postgres
 - mysql -e "create database play_testing;"
 - mysql -e "USE play_testing; create table play(id INTEGER, title VARCHAR(200)); INSERT INTO play VALUES (1, 'hello!')"
+- bash travis/setup_cassandra.sh
 script:
 - travis_wait docker pull python:3.7
 - travis_wait docker pull "$IMAGE_NAME:latest"
