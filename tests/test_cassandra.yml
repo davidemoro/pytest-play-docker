@@ -10,6 +10,6 @@
       password: cassandra
   keyspace: dev
   query: SELECT title from play WHERE code = 1;
-  variable_name: title
-  expression: results[0]
+  variable: title
+  variable_expression: results[0]
   assertion: "variables['title'] == 'hello!'"
