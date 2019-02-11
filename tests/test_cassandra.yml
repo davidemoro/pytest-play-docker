@@ -3,8 +3,8 @@
   type: execute
   connection:
     auth_provider:
-      username: user
-      password: pwd
-  keyspace: dev,
+      username: cassandra
+      password: cassandra
+  keyspace: dev
   query: SELECT title from play WHERE code = 1;
   assertion: result == 'hello!'
