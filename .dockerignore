@@ -1,6 +1,7 @@
 .git/
 docker_push/
 tests/
+travis/
 .tox/
 .pytest_cache/
 tox.ini
