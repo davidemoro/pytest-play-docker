@@ -10,6 +10,7 @@ function cassandra_ready() {
         (( count += 1 ))
         sleep 1
     done
+    echo "cassandra is ready"
 }
 
 cassandra_ready
