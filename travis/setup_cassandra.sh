@@ -1,13 +1,13 @@
 #!/bin/bash
-function cassandra_ready {
-    count = 0
+function cassandra_ready() {
+    count=0
     while ! cqlsh -e "describe cluster;" ; do
         echo "waiting for cassandra"
-        if [ count -gt 30 ]
+        if [ $count > 30 ]
         then
             exit
         fi
-        count = count + 1
+        (( count += 1 ))
         sleep 1
     done
 }
