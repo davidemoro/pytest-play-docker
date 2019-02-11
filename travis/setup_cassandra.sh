@@ -1,8 +1,14 @@
 #!/bin/bash
 function cassandra_ready {
-    while ! csqlsh -e "describe cluster;" ; do
+    count = 0
+    while ! cqlsh -e "describe cluster;" ; do
         echo "waiting for cassandra"
-        sleep 3
+        if [ count -gt 30 ]
+        then
+            exit
+        fi
+        count = count + 1
+        sleep 1
     done
 }
 
