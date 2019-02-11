@@ -11,5 +11,5 @@
   keyspace: dev
   query: SELECT title from play WHERE code = 1;
   variable: title
-  variable_expression: results[0]
-  assertion: "variables['title'] == 'hello!'"
+  variable_expression: results[0].title
+  assertion: "'$title' == 'hello!'"
