@@ -1,19 +1,23 @@
 test_data:
   - data: ciao
 ---
-- provider: mqtt
+- comment: publish a certain payload for home/bedroom/light topic (there is a subscriber running and a websocket on 8082 so that we can verify that the publish succeeds)
+  provider: mqtt
   type: publish
   host: "$mqtt_host"
   port: $mqtt_port
   endpoint: "home/bedroom/light"
   payload: $data
-- comment: connect to websocket url defined in variables.yml file (--variables option)
+- comment: connect to websocket url on 8082
   provider: play_websocket
   type: connect
   options:
     url: "ws://localhost:8082"
     timeout: 5
-- comment: receive response (echo)
+- provider: python
+  type: sleep
+  seconds: 1
+- comment: receive response we sent with mqtt publish (echo)
   provider: play_websocket
   type: recv
   url: "ws://localhost:8082"

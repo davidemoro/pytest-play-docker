@@ -1,3 +1,3 @@
 #!/bin/bash
 
-cat /tmp/echo_file.txt | echo
+cat /tmp/echo_file.txt
