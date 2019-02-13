@@ -1,0 +1,22 @@
+test_data:
+  - data: ciao
+---
+- provider: mqtt
+  type: publish
+  host: "$mqtt_host"
+  port: $mqtt_port
+  endpoint: "home/bedroom/light"
+  payload: $data
+- comment: connect to websocket url defined in variables.yml file (--variables option)
+  provider: play_websocket
+  type: connect
+  options:
+    url: "ws://localhost:8082"
+    timeout: 5
+- comment: receive response (echo)
+  provider: play_websocket
+  type: recv
+  url: "ws://localhost:8082"
+  variable: data
+  variable_expression: results
+  assertion: variables['data'] == '$data'

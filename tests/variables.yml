@@ -1,3 +1,5 @@
 ---
 pytest-play:
   websocket_url: ws://0.0.0.0:8081/
+  mqtt_host: localhost
+  mqtt_port: 1883
