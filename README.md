@@ -52,9 +52,25 @@ If you are using Windows remove ``$(pwd)`` with your current path location.
 ## Built With
 
 * pytest
-* pytest-play
+* [pytest-play](https://github.com/pytest-dev/pytest-play) with the following _pytest-play_ plugins included
+  * [play_selenium](https://github.com/davidemoro/play_selenium)
+  * [play_requests](https://github.com/davidemoro/play_requests)
+  * [play_sql](https://github.com/davidemoro/play_sql)
+  * [play_cassandra](https://github.com/davidemoro/play_cassandra)
+  * [play_dynamodb](https://github.com/davidemoro/play_dynamodb)
+  * [play_websocket](https://github.com/davidemoro/play_websocket)
+  * [play_mqtt](https://github.com/davidemoro/play_mqtt)
 * pytest supported [third party plugins](https://github.com/pytest-dev/pytest-play#third-party-pytest-play-plugins)
 * python3
+
+Included the following pytest plugins too:
+
+* [pytest-bdd](https://github.com/pytest-dev/pytest-bdd)
+* [pytest-html](https://github.com/pytest-dev/pytest-html)
+* [pytest-metadata](https://github.com/pytest-dev/pytest-metadata)
+* [pytest-randomly](https://github.com/pytest-dev/pytest-html)
+* [pytest-repeat](https://github.com/pytest-dev/pytest-repeat)
+* [pytest-testrail](https://pypi.org/project/pytest-testrail/)
 
 ## Find Us
 
