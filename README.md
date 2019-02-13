@@ -55,7 +55,6 @@ If you are using Windows remove ``$(pwd)`` with your current path location.
 * pytest-play
 * pytest supported [third party plugins](https://github.com/pytest-dev/pytest-play#third-party-pytest-play-plugins)
 * python3
-* Alpine linux
 
 ## Find Us
 
