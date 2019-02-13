@@ -14,7 +14,6 @@ more-itertools==5.0.0
 mysqlclient==1.4.2
 paho-mqtt==1.4.0
 parametrizer==0.0.1
-play-cassandra==0.0.4
 play-dynamodb==0.0.2
 play-mqtt==0.0.4
 play-requests==0.0.4
