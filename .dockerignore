@@ -6,4 +6,3 @@ travis/
 .pytest_cache/
 tox.ini
 README.md
-pytest.ini
