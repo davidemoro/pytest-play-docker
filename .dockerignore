@@ -6,3 +6,4 @@ travis/
 .pytest_cache/
 tox.ini
 README.md
+.pyup.yml
