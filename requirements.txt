@@ -12,7 +12,7 @@ idna==2.8
 iso8601==0.1.12
 jmespath==0.9.3
 Mako==1.0.7
-MarkupSafe==1.1.0
+MarkupSafe==1.1.1
 more-itertools==6.0.0
 mysqlclient==1.4.2.post1
 paho-mqtt==1.4.0
