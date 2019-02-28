@@ -37,7 +37,7 @@ pytest-metadata==1.8.0
 pytest-play==2.1.0
 pytest-pypom-navigation==2.0.3
 pytest-randomly==1.2.3
-pytest-repeat==0.7.0
+pytest-repeat==0.8.0
 pytest-splinter==2.0.1
 pytest-testrail==2.3.3
 pytest-variables==1.7.1
