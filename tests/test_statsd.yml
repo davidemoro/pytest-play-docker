@@ -1,0 +1,7 @@
+---
+- type: assert
+  provider: python
+  expression: "1 == 1"
+- provider: metrics
+  type: record_elapsed
+  name: elapsed_assertion
