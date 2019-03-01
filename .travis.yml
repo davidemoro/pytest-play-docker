@@ -17,6 +17,7 @@ before_script:
 - psql -d play_testing -c "create table play(id INTEGER, title VARCHAR(200)); INSERT INTO play VALUES (1, 'hello!')" -U postgres
 - mysql -e "create database play_testing;"
 - mysql -e "USE play_testing; create table play(id INTEGER, title VARCHAR(200)); INSERT INTO play VALUES (1, 'hello!')"
+- bash travis/setup_statsd.sh
 - bash travis/setup_websocket.sh
 - bash travis/setup_mqtt.sh
 - bash travis/setup_cassandra.sh
@@ -25,7 +26,7 @@ script:
 - travis_wait docker pull "$IMAGE_NAME:latest"
 - travis_wait 25 docker build --cache-from "$IMAGE_NAME:latest" -t "$IMAGE_NAME" .
 - docker run -i --rm -v $(pwd)/tests:/src --network host -v /var/run/mysqld/mysqld.sock:/var/run/mysqld/mysqld.sock $IMAGE_NAME --splinter-webdriver=remote --variables variables.yml
-  --splinter-remote-url=$REMOTE_URL
+  --splinter-remote-url=$REMOTE_URL --stats-d --stats-prefix play
 deploy:
   provider: script
   script: bash docker_push
