@@ -11,6 +11,7 @@ COPY requirements_cassandra.txt /src
 RUN pip install --no-cache-dir -r requirements_cassandra.txt
 COPY requirements.txt /src
 RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install --no-cache-dir -r requirements_cassandra.txt
 
 ENTRYPOINT ["pytest"]
 USER nobody
