@@ -41,7 +41,7 @@ pytest-splinter==2.0.1
 pytest-testrail==2.3.3
 pytest-variables==1.7.1
 python-dateutil==2.8.0
-PyYAML==5.1b3
+PyYAML==5.1b5
 requests==2.21.0
 RestrictedPython==4.0b8
 s3transfer==0.1.13
