@@ -1,8 +1,8 @@
 atomicwrites==1.3.0
 attrs==19.1.0
 boto3==1.9.86
-botocore==1.12.106
-certifi==2018.11.29
+botocore==1.12.111
+certifi==2019.3.9
 chardet==3.0.4
 colander==1.7.0
 docutils==0.14
@@ -41,7 +41,7 @@ pytest-splinter==2.0.1
 pytest-testrail==2.3.3
 pytest-variables==1.7.1
 python-dateutil==2.8.0
-PyYAML==5.1b3
+PyYAML==5.1b5
 requests==2.21.0
 RestrictedPython==4.0b8
 s3transfer==0.1.13
@@ -49,7 +49,7 @@ selenium==3.141.0
 simplejson==3.16.0
 six==1.12.0
 splinter==0.10.0
-SQLAlchemy==1.2.18
+SQLAlchemy==1.3.1
 statsd==3.3.0
 translationstring==1.3
 urllib3==1.24.1
