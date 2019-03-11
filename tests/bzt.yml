@@ -1,0 +1,19 @@
+execution:
+- executor: pytest
+  scenario: pytest-run
+  iterations: 1
+  files:
+  - env-ALPHA.yml
+  - requirements.txt
+  - scripts.tar.gz
+
+scenarios:
+  pytest-run:
+    additional-args: --variables env-ALPHA.yml --splinter-webdriver=firefox --splinter-make-screenshot-on-failure=false --splinter-session-scoped-browser=false
+    script: scripts/
+
+services:
+- module: shellexec
+  prepare:
+  - tar xvzf scripts.tar.gz
+  - pip3 install -r https://raw.githubusercontent.com/davidemoro/cookiecutter-qa/yaml/%7B%7Bcookiecutter.project_slug%7D%7D/requirements.txt

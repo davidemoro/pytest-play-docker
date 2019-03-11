@@ -1,0 +1,20 @@
+settings:
+  artifacts-dir: /tmp/%Y-%m-%d_%H-%M-%S.%f
+
+modules:
+  console:
+    disable: true
+
+execution:
+- executor: pytest
+  scenario: pytest-run
+  iterations: 1
+
+scenarios:
+  pytest-run:
+    script: scripts/
+
+services:
+- module: shellexec
+  prepare:
+  - pip3 install -r https://raw.githubusercontent.com/davidemoro/pytest-play-docker/master/requirements.txt
