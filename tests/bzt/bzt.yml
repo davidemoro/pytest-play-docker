@@ -9,8 +9,6 @@ execution:
 - executor: pytest
   scenario: pytest-run
   iterations: 1
-  files:
-  - scripts.tar.gz
 
 scenarios:
   pytest-run:
@@ -19,5 +17,4 @@ scenarios:
 services:
 - module: shellexec
   prepare:
-  - tar xvzf scripts.tar.gz
   - pip3 install -r https://raw.githubusercontent.com/davidemoro/pytest-play-docker/master/requirements.txt
