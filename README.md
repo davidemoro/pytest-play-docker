@@ -63,7 +63,7 @@ If you are using Windows remove ``$(pwd)`` with your current path location.
 * pytest supported [third party plugins](https://github.com/pytest-dev/pytest-play#third-party-pytest-play-plugins)
 * python3
 
-Included the following pytest plugins too:
+Included the following pytest plugins and utilities too:
 
 * [pytest-bdd](https://github.com/pytest-dev/pytest-bdd)
 * [pytest-html](https://github.com/pytest-dev/pytest-html)
@@ -71,6 +71,7 @@ Included the following pytest plugins too:
 * [pytest-randomly](https://github.com/pytest-dev/pytest-html)
 * [pytest-repeat](https://github.com/pytest-dev/pytest-repeat)
 * [pytest-testrail](https://pypi.org/project/pytest-testrail/)
+* [BlazeMeter Taurus/bzt for performance test using pytest-play](https://www.blazemeter.com/)
 
 ## Find Us
 
