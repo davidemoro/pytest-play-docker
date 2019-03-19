@@ -16,7 +16,7 @@ MarkupSafe==1.1.1
 more-itertools==6.0.0
 mysqlclient==1.4.2.post1
 paho-mqtt==1.4.0
-parametrizer==0.0.2
+parametrizer==0.0.3
 parse==1.11.1
 parse-type==0.4.2
 play-dynamodb==0.0.2
