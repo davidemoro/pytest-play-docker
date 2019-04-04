@@ -15,4 +15,3 @@ COPY requirements_bzt.txt /src
 RUN pip install --no-cache-dir -r requirements_bzt.txt
 
 ENTRYPOINT ["pytest"]
-USER nobody
