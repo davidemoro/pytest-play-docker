@@ -26,7 +26,7 @@ play-selenium==0.0.2
 play-sql==0.0.3
 play-websocket==0.0.2
 pluggy==0.9.0
-psycopg2-binary==2.8
+psycopg2-binary==2.8.1
 py==1.8.0
 PyPOM==2.2.0
 pypom-form==0.3.1
