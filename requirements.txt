@@ -11,7 +11,7 @@ idna==2.8
 iso8601==0.1.12
 Jinja2==2.10.1
 jmespath==0.9.4
-Mako==1.0.8
+Mako==1.0.9
 MarkupSafe==1.1.1
 more-itertools==7.0.0
 mysqlclient==1.4.2.post1
