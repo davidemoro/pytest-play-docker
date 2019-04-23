@@ -1,6 +1,13 @@
 test_data:
   - data: ciao
 ---
+- comment: subscribe to a topic and collect messages
+  provider: mqtt
+  type: subscribe
+  host: "$mqtt_host"
+  port: $mqtt_port
+  topic: "home/bedroom/light"
+  name: "messages"
 - comment: publish a certain payload for home/bedroom/light topic (there is a subscriber running and a websocket on 8082 so that we can verify that the publish succeeds)
   provider: mqtt
   type: publish
@@ -8,19 +15,9 @@ test_data:
   port: $mqtt_port
   endpoint: "home/bedroom/light"
   payload: $data
-- comment: connect to websocket url on 8082
-  provider: play_websocket
-  type: connect
-  options:
-    url: "ws://localhost:8082"
-    timeout: 5
 - provider: python
-  type: sleep
-  seconds: 1
-- comment: receive response we sent with mqtt publish (echo)
-  provider: play_websocket
-  type: recv
-  url: "ws://localhost:8082"
-  variable: data
-  variable_expression: results
-  assertion: variables['data'] == '$data'
+  type: wait_until
+  timeout: 6
+  expression: 'len(variables["messages"]) == 1'
+  poll: 0.1
+  sub_commands: []
