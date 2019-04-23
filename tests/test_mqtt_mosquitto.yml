@@ -8,6 +8,9 @@ test_data:
   port: $mqtt_port
   topic: "home/bedroom/light"
   name: "messages"
+- provider: python
+  type: sleep
+  seconds: 0.5
 - comment: publish a certain payload for home/bedroom/light topic (there is a subscriber running and a websocket on 8082 so that we can verify that the publish succeeds)
   provider: mqtt
   type: publish
