@@ -1,5 +1,5 @@
 apiritif==0.8.1
-Appium-Python-Client==0.40
+Appium-Python-Client==0.41
 astunparse==1.6.2
 bzt==1.13.4
 colorama==0.4.1
