@@ -1,7 +1,7 @@
 atomicwrites==1.3.0
 attrs==19.1.0
 boto3==1.9.86
-botocore==1.12.134
+botocore==1.12.137
 certifi==2019.3.9
 chardet==3.0.4
 colander==1.7.0
