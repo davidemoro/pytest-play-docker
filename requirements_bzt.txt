@@ -1,3 +1,4 @@
+-r requirements.txt
 apiritif==0.8.1
 Appium-Python-Client==0.40
 astunparse==1.6.2

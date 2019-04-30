@@ -9,12 +9,15 @@ execution:
 - executor: pytest
   scenario: pytest-run
   iterations: 1
+#  files:
+#  - requirements.txt
+#  - requirements_bzt.txt
 
 scenarios:
   pytest-run:
     script: scripts/
 
-services:
-- module: shellexec
-  prepare:
-  - pip3 install -r https://raw.githubusercontent.com/davidemoro/pytest-play-docker/master/requirements.txt
+#services:
+#- module: shellexec
+#  prepare:
+#  - pip3 install -r requirements_bzt.txt
