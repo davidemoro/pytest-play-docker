@@ -17,4 +17,4 @@ scenarios:
 services:
 - module: shellexec
   prepare:
-  - pip3 install -r https://raw.githubusercontent.com/davidemoro/pytest-play-docker/master/requirements.txt
+  - pip3 install -r https://raw.githubusercontent.com/davidemoro/pytest-play-docker/master/requirements_bzt.txt
