@@ -1,7 +1,7 @@
 # pytest-play-docker
 
 [![Build Status](https://travis-ci.org/davidemoro/pytest-play-docker.svg?branch=master)](https://travis-ci.org/davidemoro/pytest-play-docker)
-[![Updates](https://pyup.io/repos/github/davidemoro/pytest-play-docker/shield.svg)](https://pyup.io/repos/github/davidemoro/pytest-play-docker/)
+[![Requirements Status](https://requires.io/github/davidemoro/pytest-play-docker/requirements.svg?branch=master)](https://requires.io/github/davidemoro/pytest-play-docker/requirements/?branch=master)
 
 [pytest-play](https://github.com/pytest-dev/pytest-play) distributed as a docker
 based command line utility shipped with all supported third party plugins installed
