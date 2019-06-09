@@ -1,2 +1,2 @@
-cassandra-driver==3.17.0
+cassandra-driver==3.18.0
 play-cassandra==0.0.4
