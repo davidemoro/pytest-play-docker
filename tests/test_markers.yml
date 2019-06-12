@@ -1,0 +1,8 @@
+---
+markers:
+  - marker1
+  - marker2
+---
+- provider: python
+  type: assert
+  expression: "1"
