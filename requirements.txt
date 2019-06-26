@@ -24,7 +24,7 @@ parse-type==0.4.2
 play-dynamodb==0.0.2
 play-mqtt==0.0.5
 play-requests==0.0.5
-play-selenium==0.0.2
+play-selenium==0.0.3
 play-sql==0.0.3
 play-websocket==0.0.2
 pluggy==0.12.0
