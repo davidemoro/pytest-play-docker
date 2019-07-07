@@ -2,7 +2,7 @@
 apiritif==0.8.1
 Appium-Python-Client==0.46
 astunparse==1.6.2
-bzt==1.13.7
+bzt==1.13.8
 colorama==0.4.1
 colorlog==4.0.2
 cssselect==1.0.3
