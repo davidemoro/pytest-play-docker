@@ -15,7 +15,7 @@ Jinja2==2.10.1
 jmespath==0.9.4
 Mako==1.0.14
 MarkupSafe==1.1.1
-more-itertools==7.1.0
+more-itertools==7.2.0
 mysqlclient==1.4.2.post1
 paho-mqtt==1.4.0
 parametrizer==0.0.3
