@@ -1,8 +1,8 @@
 apipkg==1.5
 atomicwrites==1.3.0
 attrs==19.1.0
-boto3==1.9.194
-botocore==1.12.194
+boto3==1.9.195
+botocore==1.12.195
 certifi==2019.6.16
 chardet==3.0.4
 colander==1.7.0
