@@ -14,7 +14,7 @@ greenlet==0.4.15
 hdrpy==0.3.3
 ipaddress==1.0.22
 jsonpath-rw==1.4.0
-lxml==4.3.4
+lxml==4.3.5
 nose==1.3.7
 numpy==1.17.0
 ply==3.11
