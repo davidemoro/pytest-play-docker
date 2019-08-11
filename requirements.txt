@@ -16,7 +16,7 @@ jmespath==0.9.4
 Mako==1.1.0
 MarkupSafe==1.1.1
 more-itertools==7.2.0
-mysqlclient==1.4.3
+mysqlclient==1.4.4
 paho-mqtt==1.4.0
 parametrizer==0.0.3
 parse==1.12.0
