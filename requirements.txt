@@ -42,7 +42,7 @@ pytest-pypom-navigation==2.0.3
 pytest-randomly==3.1.0
 pytest-repeat==0.8.0
 pytest-splinter==2.0.1
-pytest-testrail==2.8.1
+pytest-testrail==2.8.2
 pytest-variables==1.8.0
 pytest-xdist==1.30.0
 python-dateutil==2.8.0
