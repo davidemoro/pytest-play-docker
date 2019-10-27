@@ -6,7 +6,7 @@ bzt==1.13.9
 colorama==0.4.1
 colorlog==4.0.2
 cssselect==1.1.0
-decorator==4.4.0
+decorator==4.4.1
 EasyProcess==0.2.7
 fuzzyset==0.0.19
 gevent==1.4.0
