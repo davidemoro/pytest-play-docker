@@ -19,7 +19,7 @@ nose==1.3.7
 numpy==1.17.4
 ply==3.11
 progressbar33==2.4
-psutil==5.6.6
+psutil==5.6.7
 python-Levenshtein==0.12.0
 PyVirtualDisplay==0.2.4
 terminaltables==3.1.0
