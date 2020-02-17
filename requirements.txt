@@ -9,7 +9,7 @@ colander==1.7.0
 docutils==0.16
 execnet==1.7.1
 glob2==0.7
-idna==2.8
+idna==2.9
 iso8601==0.1.12
 Jinja2==2.11.1
 jmespath==0.9.4
