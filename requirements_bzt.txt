@@ -1,6 +1,6 @@
 -r requirements.txt
 apiritif==0.9.2
-Appium-Python-Client==0.50
+Appium-Python-Client==0.51
 astunparse==1.6.3
 bzt==1.14.1
 colorama==0.4.3
