@@ -7,7 +7,7 @@ colorama==0.4.3
 colorlog==4.1.0
 cssselect==1.1.0
 decorator==4.4.2
-EasyProcess==0.2.10
+EasyProcess==0.3
 fuzzyset==0.0.19
 gevent==20.5.0
 greenlet==0.4.15
