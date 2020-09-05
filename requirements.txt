@@ -1,6 +1,6 @@
 apipkg==1.5
 atomicwrites==1.4.0
-attrs==20.1.0
+attrs==20.2.0
 boto3==1.14.56
 botocore==1.17.56
 certifi==2020.6.20
