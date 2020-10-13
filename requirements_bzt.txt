@@ -3,7 +3,7 @@ apiritif==0.9.5
 Appium-Python-Client==1.0.2
 astunparse==1.6.3
 bzt==1.15.0
-colorama==0.4.3
+colorama==0.4.4
 colorlog==4.4.0
 cssselect==1.1.0
 decorator==4.4.2
