@@ -1,8 +1,8 @@
 apipkg==1.5
 atomicwrites==1.4.0
 attrs==20.3.0
-boto3==1.16.43
-botocore==1.19.43
+boto3==1.16.44
+botocore==1.19.44
 certifi==2020.12.5
 chardet==4.0.0
 colander==1.8.3
