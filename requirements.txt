@@ -19,7 +19,7 @@ more-itertools==8.6.0
 mysqlclient==2.0.3
 paho-mqtt==1.5.1
 parametrizer==0.0.3
-parse==1.18.0
+parse==1.19.0
 parse-type==0.5.2
 play-dynamodb==0.0.2
 play-mqtt==0.0.5
