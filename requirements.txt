@@ -1,8 +1,8 @@
 apipkg==1.5
 atomicwrites==1.4.0
 attrs==20.3.0
-boto3==1.17.4
-botocore==1.20.4
+boto3==1.17.5
+botocore==1.20.5
 certifi==2020.12.5
 chardet==4.0.0
 colander==1.8.3
@@ -44,7 +44,7 @@ pytest-repeat==0.9.1
 pytest-splinter==3.3.1
 pytest-testrail==2.9.0
 pytest-variables==1.9.0
-pytest-xdist==2.2.0
+pytest-xdist==2.2.1
 python-dateutil==2.8.1
 PyYAML==5.4.1
 requests==2.25.1
