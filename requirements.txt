@@ -11,7 +11,7 @@ execnet==1.7.1
 glob2==0.7
 idna==2.8
 iso8601==0.1.12
-Jinja2==2.10.1
+Jinja2==2.11.3
 jmespath==0.9.4
 Mako==1.1.0
 MarkupSafe==1.1.1
