@@ -4,7 +4,7 @@ Appium-Python-Client==1.1.0
 astunparse==1.6.3
 bzt==1.15.2
 colorama==0.4.4
-colorlog==5.0.0
+colorlog==5.0.1
 cssselect==1.1.0
 decorator==5.0.6
 EasyProcess==0.3
