@@ -1,8 +1,8 @@
 apipkg==1.5
 atomicwrites==1.4.0
 attrs==20.3.0
-boto3==1.17.55
-botocore==1.20.55
+boto3==1.17.56
+botocore==1.20.56
 certifi==2020.12.5
 chardet==4.0.0
 colander==1.8.3
@@ -49,7 +49,7 @@ python-dateutil==2.8.1
 PyYAML==5.4.1
 requests==2.25.1
 RestrictedPython==5.1
-s3transfer==0.4.1
+s3transfer==0.4.2
 selenium==3.141.0
 simplejson==3.17.2
 six==1.15.0
