@@ -57,7 +57,7 @@ splinter==0.14.0
 SQLAlchemy==1.4.15
 statsd==3.3.0
 translationstring==1.4
-urllib3==1.26.4
+urllib3==1.26.5
 websocket-client==1.0.1
 zope.component==5.0.0
 zope.deferredimport==4.3.1
