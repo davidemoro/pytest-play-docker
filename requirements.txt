@@ -1,8 +1,8 @@
 apipkg==1.5
 atomicwrites==1.4.0
 attrs==21.2.0
-boto3==1.17.111
-botocore==1.20.111
+boto3==1.17.112
+botocore==1.20.112
 certifi==2021.5.30
 chardet==4.0.0
 colander==1.8.3
@@ -54,7 +54,7 @@ selenium==3.141.0
 simplejson==3.17.3
 six==1.16.0
 splinter==0.15.0
-SQLAlchemy==1.4.20
+SQLAlchemy==1.4.21
 statsd==3.3.0
 translationstring==1.4
 urllib3==1.26.6
