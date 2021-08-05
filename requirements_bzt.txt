@@ -9,7 +9,7 @@ cssselect==1.1.0
 decorator==5.0.9
 EasyProcess==0.3
 fuzzyset==0.0.19
-gevent==21.1.2
+gevent==21.8.0
 greenlet==1.1.0
 hdrpy==0.3.3
 ipaddress==1.0.23
